@@ -17,7 +17,7 @@ const createBoard = async (req,res) => {
     }
 };
 
-//Get all boards
+//Get all the boards
 const getAllBoards = async (req,res) => {
     const b_Id = req.params.b_Id;
     try{
