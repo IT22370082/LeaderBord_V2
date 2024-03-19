@@ -27,6 +27,8 @@ const getAllBoards = async (req,res) => {
         } else {
             board = await Board.find();
         }
+        board.sort((a, b) => a.rank - b.rank);
+        //console.log(board);
         res.status(200).json(board);
     }catch(err){
         res.status(500).json(err);
