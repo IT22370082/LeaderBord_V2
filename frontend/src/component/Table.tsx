@@ -32,7 +32,7 @@ export default function Table() {
         })
     }
     return (
-        <div>
+        <div><h1 >STREAMERS LEADERBOARD</h1>
             <table className="table align-middle mb-0 bg-white admin-booking-table">
                 <thead className="table-dark">
                     <tr>
