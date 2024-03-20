@@ -32,24 +32,24 @@ export default function Table() {
         })
     }
     return (
-        <div><h1 >STREAMERS LEADERBOARD</h1>
-            <table className="table align-middle mb-0 bg-white admin-booking-table">
-                <thead className="table-dark">
+        <div><h1 className='text-left text-white'>STREAMERS LEADERBOARD</h1>
+            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead className="text-xs text-gray-900 uppercase dark:text-gray-400">
                     <tr>
-                        <th>Rank</th>
-                        <th>Streamer</th>
-                        <th>Total Views</th>
-                        <th>Subscribers</th>
+                        <th scope="col" className="px-6 py-3">Rank</th>
+                        <th scope="col" className="px-6 py-3">Streamer</th>
+                        <th scope="col" className="px-6 py-3">Total Views</th>
+                        <th scope="col" className="px-6 py-3">Subscribers</th>
                     </tr>
                 </thead>
                 <tbody>
                     {/* <tr> */}
                     {boards.map(bm => (
-                        <tr key={bm.b_Id} className='table-secondary'>
-                            <td>{bm.rank}</td>
-                            <td>{bm.streamer}</td>
-                            <td>{bm.totalViews}</td>
-                            <td>{bm.subs}</td>
+                        <tr key={bm.b_Id} className="bg-white dark:bg-gray-800">
+                            <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-orange">{bm.rank}</td>
+                            <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{bm.streamer}</td>
+                            <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{bm.totalViews}</td>
+                            <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{bm.subs}</td>
                         </tr>
                     ))}
                 </tbody>
